@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import type { AppInitialProps, AppLayoutProps } from 'next/app'
 import type { NextComponentType } from 'next'

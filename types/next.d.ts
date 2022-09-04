@@ -1,10 +1,6 @@
 import * as React from 'react'
 import type { AppProps } from 'next/app'
-import type {
-  NextComponentType,
-  NextLayoutComponentType,
-  NextPageContext,
-} from 'next'
+import type { NextComponentType, NextLayoutComponentType, NextPageContext } from 'next'
 import type { Router } from 'next/router'
 
 declare module 'next' {
@@ -14,7 +10,7 @@ declare module 'next' {
     P
   > & {
     getLayout?: (
-      page: React.ReactElement<unknown, unknown> | null
+      page: React.ReactElement<unknown, unknown> | null,
     ) => React.ReactElement<unknown, unknown> | null
   }
 
@@ -24,7 +20,7 @@ declare module 'next' {
     P
   > & {
     getLayout?: (
-      page: React.ReactElement<unknown, unknown> | null
+      page: React.ReactElement<unknown, unknown> | null,
     ) => React.ReactElement<unknown, unknown> | null
   }
 }

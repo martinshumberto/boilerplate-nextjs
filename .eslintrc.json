@@ -25,10 +25,12 @@
       "prependCustom": false,
       "cssFiles": [
         "**/*.css",
+        "**/*.scss",
         "!**/node_modules",
         "!**/.*",
         "!**/dist",
-        "!**/build"
+        "!**/build",
+        "!**/.next"
       ],
       "cssFilesRefreshRate": 5000,
       "removeDuplicates": true,

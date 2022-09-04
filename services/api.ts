@@ -22,7 +22,7 @@ instance.interceptors.response.use(
     }
 
     return Promise.reject(err.message)
-  }
+  },
 )
 
 const api = <T>(cfg: AxiosRequestConfig) => instance.request<unknown, T>(cfg)

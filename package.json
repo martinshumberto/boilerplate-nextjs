@@ -6,7 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:css": "npx stylelint **/*.css --aei --color",
+    "lint:scss": "npx stylelint **/*.scss --aei --color",
+    "lint:fix": "yarn lint --fix && yarn lint:css && yarn lint:scss",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "yarn prettier --write",
+    "format": "yarn prettier:fix && yarn lint:fix",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "commit": "commit"
   },
   "dependencies": {
     "@radix-ui/react-popover": "1.0.0",
@@ -14,9 +23,13 @@
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.54.8",
     "tailwindcss-radix": "^2.5.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@commitlint/prompt-cli": "^17.1.2",
     "@types/node": "18.7.14",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
@@ -28,10 +41,22 @@
     "eslint-plugin-tailwindcss": "^3.6.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "node-sass": "^7.0.1",
     "postcss": "^8.4.16",
+    "postcss-scss": "^4.0.4",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
+    "stylelint": "^14.x",
+    "stylelint-config-prettier": "^9.x",
+    "stylelint-config-standard": "^26.x",
     "tailwindcss": "^3.1.8",
     "typescript": "4.8.2"
-  }
+  },
+  "keywords": [
+    "next",
+    "boilerplate",
+    "typescript",
+    "starter",
+    "template"
+  ]
 }
