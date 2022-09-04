@@ -7,6 +7,7 @@
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
+  "ignorePatterns": ["tailwind.config.js", "/.stylelintrc.js"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
