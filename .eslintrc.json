@@ -1,13 +1,17 @@
 {
   "root": true,
-  "plugins": ["@typescript-eslint"],
+  "env": {
+    "jest/globals": true,
+    "jest": true
+  },
+  "plugins": ["@typescript-eslint", "jest"],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
-  "ignorePatterns": ["tailwind.config.js", "/.stylelintrc.js"],
+  "ignorePatterns": ["tailwind.config.js", "./.stylelintrc.js", "./jest.config.js"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
